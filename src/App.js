@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Form, Button, FormControl} from 'react-bootstrap';
+import {BrowserRouter, Route} from 'react-router-dom'
+import Home from './compenents/Home';
+import Posts from './compenents/Posts';
+import Sidenav from './compenents/sidenav';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div>
+    <BrowserRouter>
+      <Sidenav />
+      <Form inline>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-success">Search</Button>
+      </Form>
+      <Route path="/" component={Home} />
+      <Route path="/posts" component={Posts} />
+    </BrowserRouter>
+  </div>
   );
 }
 
