@@ -8,17 +8,11 @@ import Sidenav from './compenents/sidenav';
 
 function App() {
   return (
-  <div>
     <BrowserRouter>
       <Sidenav />
-      <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-success">Search</Button>
-      </Form>
       <Route path="/" component={Home} />
       <Route path="/posts" component={Posts} />
     </BrowserRouter>
-  </div>
   );
 }
 
