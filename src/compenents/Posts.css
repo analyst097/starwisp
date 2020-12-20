@@ -1,0 +1,111 @@
+.posts{
+    min-height:100vh;
+    margin-left: 25vw;
+    width: 100%;
+}
+
+.posts>.postInput{
+    margin: 1rem;
+    background: white;
+    padding: 1rem;
+    width: 75%;
+    border-radius: 15px;
+    box-shadow: 2px 3px 2px rgba(24, 23, 23, 0.301);
+}
+
+.postInput_textInput{
+   text-align: center;
+}
+
+.posts>.postInput>.postInput_textInput>textarea{
+    width: 95%;
+    border-color: rgba(255, 255, 255, 0.555);
+    background: rgb(250, 250, 250);
+    border-radius: 15px;
+    resize: none;
+    padding: 1rem;
+}
+
+.posts>.postInput>.postInput_textInput>textarea:focus{
+    outline: none;
+}
+
+.posts>.postInput>.postInput_actionButtons{
+    margin-top: 1rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.postInput_actionButtons>.left>.cancelButton{
+    color: #EF3E36;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
+.postInput_actionButtons>.right{
+    display: flex;
+}
+
+.postInput_actionButtons>.right>.shareButton{
+    color: white;
+    background:  #ff6c40;
+    padding: 0;
+    border-radius: 11px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 1rem;
+    justify-content: flex-end;
+    height: 35px;
+    cursor: pointer;
+}
+
+.shareButton>.sendArrow{
+    height: 100%;
+    background: rgba(255, 196, 128, 1);
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .25rem;
+}
+
+.posts>.postsList{
+    margin: 1rem;
+    width: 75%;
+}
+
+.posts>.postsList>.postInfoCard{
+    background: white;
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    display: flex;
+    box-shadow: 2px 3px 2px rgba(24, 23, 23, 0.301);
+}
+
+.postInfoCard>.avatar{
+    flex: 0.2;
+}
+
+.postInfoCard>.information{
+    flex: 0.6;
+   
+}
+
+.information>.username{
+    font-weight: bold;
+}
+
+.information>.info{
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 200;
+    color: rgb(128, 128, 128);
+}
+
+.postInfoCard>.time{
+    flex: 0.1;
+    float: right;
+    font-size: 0.8rem;
+}

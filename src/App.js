@@ -8,7 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <Sidenav />
-      <Route path="/" component={Home} />
+      <Route path="/" exact component={Home} />
       <Route path="/posts" component={Posts} />
     </BrowserRouter>
   );

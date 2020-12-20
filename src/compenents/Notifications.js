@@ -54,7 +54,7 @@ export default class Notifications extends Component {
         ))
         const events = this.state.notifications.map(event=>(
             <div className="card" key={event.id}>
-                <div className="card-img"><img src="" alt="User" /></div>
+                <div className="card-img"><img src="./avatar2.svg" alt="User" /></div>
                 <div className="card-text">
                     <div>{event.user}</div>
                     <p>{event.message}</p>

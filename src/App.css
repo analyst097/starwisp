@@ -64,9 +64,7 @@
 
 #notifs{
   margin: 10px;
-  overflow: scroll;
   max-height: 300px;
-  
   width: auto;
 }
 
@@ -97,7 +95,12 @@ button{
   outline: none;
 }
 
- #events-tab{
+#notif-tab, #events-tab{
+  overflow: scroll;
+  max-height: 300px;
+}
+
+#events-tab{
     display: none
 }
 
