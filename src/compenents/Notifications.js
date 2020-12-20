@@ -17,33 +17,45 @@ export default class Notifications extends Component {
                 {id:1, user: 'Admin', message: 'Faculty updated syllabus'},
             ],
             events:[
-                {id:1, user: 'Admin', message: 'Faculty updated syllabus'},
-                {id:2, user: 'Admin', message: 'Faculty updated syllabus'},
-                {id:3, user: 'Admin', message: 'Faculty updated syllabus'},
-                {id:4, user: 'Admin', message: 'Faculty updated syllabus'},
-                {id:5, user: 'Admin', message: 'Faculty updated syllabus'},
-                {id:6, user: 'Admin', message: 'Faculty updated syllabus'},
-                {id:7, user: 'Admin', message: 'Faculty updated syllabus'},
-                {id:8, user: 'Admin', message: 'Faculty updated syllabus'},
-                {id:1, user: 'Admin', message: 'Faculty updated syllabus'},
+                {id:1, user: 'Faculty', message: 'Faculty updated syllabus'},
+                {id:2, user: 'Faculty', message: 'Faculty updated syllabus'},
+                {id:3, user: 'Faculty', message: 'Faculty updated syllabus'},
+                {id:4, user: 'Faculty', message: 'Faculty updated syllabus'},
+                {id:5, user: 'Faculty', message: 'Faculty updated syllabus'},
+                {id:6, user: 'Faculty', message: 'Faculty updated syllabus'},
+                {id:7, user: 'Faculty', message: 'Faculty updated syllabus'},
+                {id:8, user: 'Faculty', message: 'Faculty updated syllabus'},
+                {id:1, user: 'Faculty', message: 'Faculty updated syllabus'},
             ]
+        }
+    }
+
+    handleTab = e =>{
+        if(e.target.id == '1'){
+            document.getElementById('events-tab').style.display = "none";
+            document.getElementById('notif-tab').style.display = "block";
+        }
+        else{
+            document.getElementById('notif-tab').style.display = "none";
+            document.getElementById('events-tab').style.display = "block";
+
         }
     }
 
     render() {
         const notifs = this.state.notifications.map(notif=>(
-            <div key={notif.id}>
-                <div><img src="" alt="user"/></div>
-                <div>
+            <div className="card" key={notif.id}>
+                <div className="card-img" ><img src="" alt="User" /></div>
+                <div className="card-text">
                     <div>{notif.user}</div>
                     <p>{notif.message}</p>
                 </div>
             </div>
         ))
         const events = this.state.notifications.map(event=>(
-            <div key={event.id}>
-                <div><img src="" alt="user"/></div>
-                <div>
+            <div className="card" key={event.id}>
+                <div className="card-img"><img src="" alt="User" /></div>
+                <div className="card-text">
                     <div>{event.user}</div>
                     <p>{event.message}</p>
                 </div>
@@ -52,11 +64,16 @@ export default class Notifications extends Component {
 
         return (
             <div className="notifs">
-                <button className="tab">Notifications</button>
-                <button className="tab">Events</button>
-                <div id="notif-tab">
+                <div className="tab">
+                    <button id='1' className="tab-item" onClick={this.handleTab}>Notifications</button>
+                    <button id='2' className="tab-item" onClick={this.handleTab}>Events</button>
                 </div>
-                <div id="events-tab"></div>
+                <div id="notif-tab">
+                    {notifs}
+                </div>
+                <div id="events-tab">
+                    {events}
+                </div>
             </div>
         )
     }

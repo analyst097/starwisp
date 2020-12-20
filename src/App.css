@@ -43,13 +43,14 @@
 }
 
 #search-box{
+  font-size: 20px;
   width: 70vw;
   outline: none;
-  height: 40px;
+  height: 20px;
   border: none;
   background-color: #ddd;
   border-radius: 20px;
-  padding: 20px;
+  padding: 15px;
   margin-bottom: 2vw;
 }
 
@@ -63,7 +64,10 @@
 
 #notifs{
   margin: 10px;
+  overflow: scroll;
+  max-height: 300px;
   
+  width: auto;
 }
 
 #notes{
@@ -91,4 +95,42 @@
 button{
   border: none;
   outline: none;
+}
+
+ #events-tab{
+    display: none
+}
+
+.card{
+  display: flex;
+}
+
+.stats{
+  margin: 3vw;
+  background-color: #fff;
+  padding: 3%;
+  border-radius: 12px;
+  width: 300px;
+}
+
+.row-2{
+  display: flex;
+}
+
+.tab{
+  padding: 5px;
+}
+
+.tab-item{
+  padding: 10px;
+}
+
+.card-img, .card-text{
+  display: inline-block;
+
+  margin: 2px;
+}
+
+.card-img{
+  background-color: #eee;
 }
